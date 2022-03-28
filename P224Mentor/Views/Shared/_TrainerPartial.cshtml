@@ -1,0 +1,23 @@
+﻿@model IEnumerable<TrainerVM>
+
+@foreach (TrainerVM trainer in Model)
+                {
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="member">
+                            <img src="~/assets/img/trainers/@trainer.Image" class="img-fluid" alt="">
+                            <div class="member-content">
+                                <h4>@trainer.Name @trainer.Id @trainer.SurName</h4>
+                                <span>@trainer.Category.Name</span>
+                                <p>
+                                    @trainer.Info
+                                </p>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
